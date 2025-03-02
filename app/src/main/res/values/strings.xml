@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Medical Care</string>
+    <string name="autor_name">Wilson Steven Nuñez Labrador</string>
+    <string name="register_button">Regístrate</string>
+    <string name="intro_text">
+        Inicia una nueva aventura con Medical Care y descubre una nueva forma de ver el mundo
+    </string>
+    <string name="start_button">Comienza</string>
+    <string name="welcome_text_login">
+        La aventura está por iniciar, por favor inicia sesión
+    </string>
+    <string name="login_button">Ingresar</string>
+    <string name="forgot_password">Recupera Tu Contraseña</string>
+    <string name="register_info">¿No tienes una cuenta?</string>
+    <string name="google_button">Ingresa con Google</string>
+    <string name="register_description">Completa el formulario para crear tu cuenta</string>
+
+    <string name="txtSend">Enviar</string>
+
+    <!-- activity register -->
+    <string name="hintName">Nombres completos</string>
+    <string name="hintLastname">Apellidos completos</string>
+    <string name="hintEmail">Correo electrónico</string>
+    <string name="hintPhone">Teléfono</string>
+    <string name="hintPassword">Contraseña</string>
+    <string name="hintRepeatPassword">Repite tu contraseña</string>
+    <string name="hintTyC">Acepto términos y condiciones</string>
+
+    <!-- Activity recovery password -->
+    <string name="forgot_password_title">
+        ¿Olvidaste tu contraseña?
+    </string>
+    <string name="forgot_password_txt">
+         No te preocupes, ingresa tu correo electrónico y te enviaremos un
+        enlace para restablecerla. Sigue las instrucciones en tu correo para crear una nueva
+        contraseña y recuperar el acceso a tu cuenta.
+    </string>
+    <string name="backButton">Regresar</string>
+
+    <!-- Activity user profile -->
+    <string name="userProfileDescription">Aquí podrás consultar y editar tus datos personales</string>
+    <string name="userProfileEditButton">Editar Perfil</string>
+    <string name="userProfileImageDescription">Imagen de perfil</string>
+    <string name="full_name_format">%1$s %2$s</string>
+    <string name="btn_logout">Cerrar sesión</string>
+
+</resources>
