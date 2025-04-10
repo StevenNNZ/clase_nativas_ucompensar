@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/purpura"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/ivLogoRegister"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/logo"
+            />
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvRegisterDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/register_description"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextNames"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/negro"
+            android:hint="@string/hintName"
+            android:layout_marginTop="30dp"
+           />
+
+        <EditText
+            android:id="@+id/editTextLastNames"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/negro"
+            android:hint="@string/hintLastname"
+            android:layout_marginTop="30dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/negro"
+            android:hint="@string/hintEmail"
+            android:layout_marginTop="30dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="text|phone"
+            android:textColor="@color/negro"
+            android:hint="@string/hintPhone"
+            android:layout_marginTop="30dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@color/negro"
+            android:hint="@string/hintPassword"
+            android:layout_marginTop="30dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextRepeatPassword"
+            style="@style/EditTextRounded"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@color/negro"
+            android:hint="@string/hintRepeatPassword"
+            android:layout_marginTop="30dp"
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxTyC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/blanco"
+            android:text="@string/hintTyC"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="313dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/celeste"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@string/register_button"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/marino"
+            app:strokeWidth="2.5dp" />
+
+    </LinearLayout>
+
+</ScrollView>

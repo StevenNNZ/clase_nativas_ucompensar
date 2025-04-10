@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment"
+    >
+
+    <fragment android:id="@+id/inicioFragment"
+        android:name="com.example.tienda_virtual.fragments.InicioFragment"
+        android:label="@string/inicio"
+        />
+
+    <fragment android:id="@+id/productosFragment"
+        android:name="com.example.tienda_virtual.fragments.ProductosFragment"
+        android:label="@string/productos"
+        />
+
+    <fragment android:id="@+id/categoriasFragment"
+        android:name="com.example.tienda_virtual.fragments.CategoriasFragment"
+        android:label="@string/categorias"
+        />
+
+    <fragment android:id="@+id/carritoFragment"
+        android:name="com.example.tienda_virtual.fragments.CarritoFragment"
+        android:label="@string/carrito"
+        />
+
+    <fragment android:id="@+id/perfilFragment"
+        android:name="com.example.tienda_virtual.fragments.PerfilFragment"
+        android:label="@string/perfil"
+        />
+
+    <!--<fragment android:id="@+id/editarPerfilFragment"
+        android:name="com.example.tienda_virtual.fragments.ContactoFragment"
+        android:label="@string/contacto"
+        />-->
+
+
+</navigation>
