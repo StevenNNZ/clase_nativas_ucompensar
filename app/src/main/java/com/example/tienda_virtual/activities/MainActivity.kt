@@ -48,10 +48,14 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
+        //Todos los fragment se deben relacionra aquí
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.inicioFragment,
-                R.id.productosFragment
+                R.id.productosFragment,
+                R.id.perfilFragment,
+                R.id.carritoFragment,
+                R.id.categoriasFragment,
             ),
             drawerLayout
         )

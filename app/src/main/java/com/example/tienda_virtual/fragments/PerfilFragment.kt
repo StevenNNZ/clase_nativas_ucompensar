@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
 import androidx.fragment.app.Fragment
 import com.example.clase_nativas.utils.ToastAlert
@@ -22,6 +23,11 @@ class PerfilFragment : Fragment() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var btnGuardarDatos: Button
     private lateinit var btnCerrarSesion: Button
+    private lateinit var txtNombres: TextView
+    private lateinit var txtApellidos: TextView
+    private lateinit var txtCorreo: TextView
+    private lateinit var txtTelefono: TextView
+    private var isEditing = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,6 +46,14 @@ class PerfilFragment : Fragment() {
         edtTelefono = view.findViewById(R.id.edtTelefonoPerfil)
         btnCerrarSesion = view.findViewById(R.id.btnCerrarSesion)
         btnGuardarDatos = view.findViewById(R.id.btnGuardarDatos)
+        txtNombres = view.findViewById(R.id.txtNombrePerfil)
+        txtApellidos = view.findViewById(R.id.txtApellidoPerfil)
+        txtCorreo = view.findViewById(R.id.txtCorreoPerfil)
+        txtTelefono = view.findViewById(R.id.txtTelefonoPerfil)
+
+        //ocultamos los edit text
+        mostrarModoEdicion(false);
+
 
         //Inicializamos los valores guardados
         cargarDatosUsuario()
@@ -51,24 +65,61 @@ class PerfilFragment : Fragment() {
 
         //Evento para actualizar datos
         btnGuardarDatos.setOnClickListener {
-            guardarDatosUsuario()
+            if (!isEditing) {
+                // Activar edición
+                isEditing = true
+                btnGuardarDatos.text =  getString(R.string.userProfileEditButton)
+
+                mostrarModoEdicion(true)
+            } else {
+                // Guardar datos
+                guardarDatosUsuario()
+                isEditing = false
+                btnGuardarDatos.text = getString(R.string.editar_datos)
+
+                mostrarModoEdicion(false)
+                cargarDatosUsuario()
+            }
         }
+
 
         return view
     }
 
+    private fun mostrarModoEdicion(editar: Boolean) {
+        val visEdit = if (editar) View.VISIBLE else View.GONE
+        val visTexto = if (editar) View.GONE else View.VISIBLE
 
-    fun cargarDatosUsuario(){
+        edtNombres.visibility = visEdit
+        edtApellidos.visibility = visEdit
+        edtCorreo.visibility = visEdit
+        edtTelefono.visibility = visEdit
+
+        txtNombres.visibility = visTexto
+        txtApellidos.visibility = visTexto
+        txtCorreo.visibility = visTexto
+        txtTelefono.visibility = visTexto
+    }
+
+
+
+    fun cargarDatosUsuario() {
         val name = sharedPreferences.getString("name", "")
         val lastNames = sharedPreferences.getString("lastNames", "")
         val email = sharedPreferences.getString("email", "")
         val phone = sharedPreferences.getString("phone", "")
+
+        txtNombres.text = "Nombres: $name"
+        txtApellidos.text = "Apellidos: $lastNames"
+        txtCorreo.text = "Correo: $email"
+        txtTelefono.text = "Teléfono: $phone"
 
         edtNombres.setText(name)
         edtApellidos.setText(lastNames)
         edtCorreo.setText(email)
         edtTelefono.setText(phone)
     }
+
 
     private fun guardarDatosUsuario(){
         val editor = sharedPreferences.edit()

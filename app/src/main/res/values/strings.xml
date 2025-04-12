@@ -76,6 +76,7 @@
     <string name="habitosReciclajeTxt">Hábitos de reciclaje (porcentaje)</string>
     <string name="btnMedicion">Medir impacto</string>
     <string name="datos_del_usuario">Datos del usuario</string>
+    <string name="editar_datos">Editar Datos</string>
 
 
 </resources>
